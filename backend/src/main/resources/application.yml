@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: farmshop-backend
+  sql:
+    init:
+      mode: never
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/farmshop?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8080
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: 'NULL'
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:farmshop-natural-organic-secret-key-for-demo-use-only-2026}
+    expiration-hours: 24
+  cors:
+    allowed-origins:
+      - http://localhost:5173
+      - http://127.0.0.1:5173

@@ -1,0 +1,20 @@
+.ace-tool/
+.idea/
+outputs/
+tmp_doc_extract/
+start-test.log
+backend.zip
+uploads/
+*.log
+
+# backend
+backend/target/
+backend/uploads/
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS/editor
+.DS_Store
+Thumbs.db
